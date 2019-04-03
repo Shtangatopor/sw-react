@@ -12,7 +12,16 @@ const WEATHER_DATA = {
 
 class App extends Component {
 
+    state = {
+        season: 'winter',
+    };
+
     render() {
+        const {season} = this.state;
+        console.log(WEATHER_DATA);
+        console.log(season);
+
+
         return (
             <div className="App">
                 <header className="App-header">
@@ -28,6 +37,7 @@ class App extends Component {
                 </div>
                 <div>
                     <h3>image</h3>
+                    <img src={WEATHER_DATA[season]}/>
                 </div>
             </div>
 
