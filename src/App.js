@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Button} from "@material-ui/core";
+import Root from "./Root";
 
 const WEATHER_DATA = {
     winter : 'https://www.varlamov.me/2016/snegopad/24.jpg',
@@ -11,19 +12,30 @@ const WEATHER_DATA = {
 };
 
 class App extends Component {
-
     state = {
         season: 'winter',
+        isLoading: false,
     };
+
     handleChange = (e) => {
+        console.log('click');
         this.setState({
-            season: e.currentTarget.value
-        })
+            season: e.currentTarget.value,
+        });
     };
+
+    componentDidMount() {
+    }
+    componentWillReceiveProps(nextProps, nextContext) {
+        console.log('next props');
+    }
+    componentWillUnmount(){
+        console.log('unmount');
+    }
 
     render() {
         const {season} = this.state;
-
+        console.log(this.state);
 
         return (
             <div className="App">
@@ -39,8 +51,7 @@ class App extends Component {
                     <Button value={'autumn'} onClick={this.handleChange}>Осень</Button>
                 </div>
                 <div>
-                    <h3>image</h3>
-                    <img src={WEATHER_DATA[season]} alt={season}/>
+                    <Root imgUrl={WEATHER_DATA[season]} />
                 </div>
             </div>
 
