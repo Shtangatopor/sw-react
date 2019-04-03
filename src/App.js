@@ -15,8 +15,10 @@ class App extends Component {
     state = {
         season: 'winter',
     };
-    handleChange = () => {
-        console.log('click');
+    handleChange = (e) => {
+        this.setState({
+            season: e.currentTarget.value
+        })
     };
 
     render() {
@@ -31,10 +33,10 @@ class App extends Component {
                 </header>
 
                 <div className='button'>
-                    <Button onClick={this.handleChange}>Зима</Button>
-                    <Button onClick={this.handleChange}>Весна</Button>
-                    <Button onClick={this.handleChange}>Лето</Button>
-                    <Button onClick={this.handleChange}>Осень</Button>
+                    <Button value={'winter'} onClick={this.handleChange}>Зима</Button>
+                    <Button value={'spring'} onClick={this.handleChange}>Весна</Button>
+                    <Button value={'summer'} onClick={this.handleChange}>Лето</Button>
+                    <Button value={'autumn'} onClick={this.handleChange}>Осень</Button>
                 </div>
                 <div>
                     <h3>image</h3>
