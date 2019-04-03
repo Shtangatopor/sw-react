@@ -37,7 +37,7 @@ class App extends Component {
                 </div>
                 <div>
                     <h3>image</h3>
-                    <img src={WEATHER_DATA[season]}/>
+                    <img src={WEATHER_DATA[season]} alt={season}/>
                 </div>
             </div>
 
