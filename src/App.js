@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {Button} from "@material-ui/core";
 import ImageLoader from 'react-load-image';
+import CircularProgress from "@material-ui/core/CircularProgress";
+
 
 const WEATHER_DATA = {
     winter : 'https://www.varlamov.me/2016/snegopad/24.jpg',
@@ -11,8 +13,9 @@ const WEATHER_DATA = {
     autumn : 'https://varlamov.me/2017/piter_dirt/12.jpg',
 };
 
+
 function Preloader(props) {
-    return <p >loading...</p>;
+    return <CircularProgress  /> ;
 }
 
 
