@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import {Button} from "@material-ui/core";
 import ImageLoader from 'react-load-image';
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 
 const WEATHER_DATA = {
@@ -15,7 +14,8 @@ const WEATHER_DATA = {
 
 
 function Preloader(props) {
-    return <CircularProgress  /> ;
+    const spiner = require('./public/spiner.gif');
+    return <img src={spiner} alt='spiner'/> ;
 }
 
 
