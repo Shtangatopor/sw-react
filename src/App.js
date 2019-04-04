@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Button} from "@material-ui/core";
-import Root from "./Root";
+import ImageLoader from 'react-load-image';
 
 const WEATHER_DATA = {
     winter : 'https://www.varlamov.me/2016/snegopad/24.jpg',
@@ -11,34 +11,28 @@ const WEATHER_DATA = {
     autumn : 'https://varlamov.me/2017/piter_dirt/12.jpg',
 };
 
+function Preloader(props) {
+    return <p >loading...</p>;
+}
+
+
 class App extends Component {
     state = {
         season: 'winter',
-        isLoading: false,
     };
 
     handleChange = (e) => {
-        console.log('click');
         this.setState({
             season: e.currentTarget.value,
         });
     };
 
-    componentDidMount() {
-    }
-    componentWillReceiveProps(nextProps, nextContext) {
-        console.log('next props');
-    }
-    componentWillUnmount(){
-        console.log('unmount');
-    }
-
     render() {
         const {season} = this.state;
-        console.log(this.state);
 
         return (
             <div className="App">
+
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>Времена года в России</p>
@@ -50,9 +44,15 @@ class App extends Component {
                     <Button value={'summer'} onClick={this.handleChange}>Лето</Button>
                     <Button value={'autumn'} onClick={this.handleChange}>Осень</Button>
                 </div>
+
                 <div>
-                    <Root imgUrl={WEATHER_DATA[season]} />
+                    <ImageLoader src={WEATHER_DATA[season]}>
+                        <img alt={WEATHER_DATA[season]}/>
+                        <div>Error!</div>
+                        <Preloader />
+                    </ImageLoader>
                 </div>
+
             </div>
 
         );
