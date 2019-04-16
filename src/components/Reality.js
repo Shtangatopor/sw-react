@@ -20,12 +20,14 @@ export default function Reality() {
     const [season, setSeason] = useState('winter');
 
         return (
-            <div className="App">
+
+            <div style={{backgroundColor: 'black'}} >
+                <h4 style={{color: 'white', padding: '16px'}}>Добро пожаловать в реальность </h4>
                 <div className='button'>
-                    <Button value={'winter'} onClick={(e) => setSeason(e.currentTarget.value)}>Зима</Button>
-                    <Button value={'spring'} onClick={(e) => setSeason(e.currentTarget.value)}>Весна</Button>
-                    <Button value={'summer'} onClick={(e) => setSeason(e.currentTarget.value)}>Лето</Button>
-                    <Button value={'autumn'} onClick={(e) => setSeason(e.currentTarget.value)}>Осень</Button>
+                    <Button style={{color: 'white'}} value={'winter'} onClick={(e) => setSeason(e.currentTarget.value)}>Зима</Button>
+                    <Button style={{color: 'white'}} value={'spring'} onClick={(e) => setSeason(e.currentTarget.value)}>Весна</Button>
+                    <Button style={{color: 'white'}} value={'summer'} onClick={(e) => setSeason(e.currentTarget.value)}>Лето</Button>
+                    <Button style={{color: 'white'}} value={'autumn'} onClick={(e) => setSeason(e.currentTarget.value)}>Осень</Button>
                 </div>
                 <div>
                     <ImageLoader src={WEATHER_DATA[season]}>

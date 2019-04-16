@@ -2,7 +2,14 @@ import React, {useState} from 'react';
 import '../App.css';
 import {Button} from "@material-ui/core";
 import ImageLoader from 'react-load-image';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 
+const style = theme => ({
+    App: {
+        // color: 'white',
+        backgroundColor: 'blue',
+    }
+});
 
 const WEATHER_DATA = {
     winter : 'https://ribttes.com/wp-content/uploads/2015/01/White-Snowy-Winters-in-Russia.jpg',
@@ -16,12 +23,13 @@ function Preloader(props) {
     return <img src={spiner} alt='spiner'/> ;
 }
 
-export default function Expected() {
+function Expected(props) {
     const [season, setSeason] = useState('winter');
 
         return (
-            <div className="App">
-                <div className='button'>
+            <div >
+                <h4 style={{ padding: '16px'}}>История закончится прямо здесь </h4>
+                <div className='App-button'>
                     <Button value={'winter'} onClick={(e) => setSeason(e.currentTarget.value)}>Зима</Button>
                     <Button value={'spring'} onClick={(e) => setSeason(e.currentTarget.value)}>Весна</Button>
                     <Button value={'summer'} onClick={(e) => setSeason(e.currentTarget.value)}>Лето</Button>
@@ -37,3 +45,5 @@ export default function Expected() {
             </div>
         );
 }
+
+export default withStyles(style)(Expected);
