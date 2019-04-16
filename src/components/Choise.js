@@ -26,7 +26,7 @@ const styles = theme => ({
     }
 });
 
-function Choice(props) {
+ const Choice = (props) => {
     const { classes } = props;
     return(
         <div className={classes.root}>
