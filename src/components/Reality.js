@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import '../App.css';
 import {Button} from "@material-ui/core";
 import ImageLoader from 'react-load-image';
@@ -16,28 +16,16 @@ function Preloader(props) {
     return <img src={spiner} alt='spiner'/> ;
 }
 
-
-class Main extends Component {
-    state = {
-        season: 'winter',
-    };
-
-    handleChange = (e) => {
-        this.setState({
-            season: e.currentTarget.value,
-        });
-    };
-
-    render() {
-        const {season} = this.state;
+export default function Reality() {
+    const [season, setSeason] = useState('winter');
 
         return (
             <div className="App">
                 <div className='button'>
-                    <Button value={'winter'} onClick={this.handleChange}>Зима</Button>
-                    <Button value={'spring'} onClick={this.handleChange}>Весна</Button>
-                    <Button value={'summer'} onClick={this.handleChange}>Лето</Button>
-                    <Button value={'autumn'} onClick={this.handleChange}>Осень</Button>
+                    <Button value={'winter'} onClick={(e) => setSeason(e.currentTarget.value)}>Зима</Button>
+                    <Button value={'spring'} onClick={(e) => setSeason(e.currentTarget.value)}>Весна</Button>
+                    <Button value={'summer'} onClick={(e) => setSeason(e.currentTarget.value)}>Лето</Button>
+                    <Button value={'autumn'} onClick={(e) => setSeason(e.currentTarget.value)}>Осень</Button>
                 </div>
                 <div>
                     <ImageLoader src={WEATHER_DATA[season]}>
@@ -46,11 +34,6 @@ class Main extends Component {
                         <Preloader />
                     </ImageLoader>
                 </div>
-
             </div>
-
         );
-    }
 }
-
-export default Main;
