@@ -1,12 +1,18 @@
 import React from "react";
+import '../App.css';
+import Choice from './Choise';
+import Header from "./Header";
 
 
-export const Home = () => {
+
+
+function Home() {
     return(
-        <div>
-            <h3>Home component</h3>
-
+        <div className="App-Home" >
+            <img src="https://www.meme-arsenal.com/memes/bd22332b528d413b8e7ca7fb0a7ccf58.jpg" alt='morpheus'/>
+            <Choice />
         </div>
-
     )
 };
+
+export default Home;

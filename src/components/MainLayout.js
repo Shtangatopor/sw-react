@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from 'react-router-dom';
 import Expected from "./Expected";
 import Reality from "./Reality";
-import {Home} from "./Home";
+import Home from "./Home";
 
 
 export const MainLayout = () => {
