@@ -14,6 +14,5 @@ export const MainLayout = () => {
                 <Route exact path='/reality' component={Reality}/>
             </Switch>
         </main>
-
     );
 };
