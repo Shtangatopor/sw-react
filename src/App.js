@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/Header";
-import Expected from "./components/Expected";
+import {MainLayout} from "./components/MainLayout";
 
 const App = () => (
     <div className="App">
 
         <Header/>
 
-        <Expected/>
+        <MainLayout/>
 
     </div>
 );
