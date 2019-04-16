@@ -11,19 +11,19 @@ const style = theme => ({
     }
 });
 
-const WEATHER_DATA = {
+const __weatherData = {
     winter : 'https://ribttes.com/wp-content/uploads/2015/01/White-Snowy-Winters-in-Russia.jpg',
     spring : 'https://ak9.picdn.net/shutterstock/videos/31300519/thumb/1.jpg',
     summer : 'https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2018/11/Best-Time-To-Visit8.jpg',
     autumn : 'http://earth-chronicles.com/wp-content/uploads/2016/09/K6CeZZvXmYQ.jpg',
 };
 
-function Preloader(props) {
+const Preloader = () => {
     const spiner = require('../public/spinner.gif');
     return <img src={spiner} alt='spiner'/> ;
-}
+};
 
-function Expected(props) {
+const Expected = ()  => {
     const [season, setSeason] = useState('winter');
 
         return (
@@ -36,14 +36,14 @@ function Expected(props) {
                     <Button value={'autumn'} onClick={(e) => setSeason(e.currentTarget.value)}>Осень</Button>
                 </div>
                 <div>
-                    <ImageLoader src={WEATHER_DATA[season]}>
-                        <img alt={WEATHER_DATA[season]}/>
+                    <ImageLoader src={__weatherData[season]}>
+                        <img alt={__weatherData[season]}/>
                         <div>Error!</div>
                         <Preloader />
                     </ImageLoader>
                 </div>
             </div>
         );
-}
+};
 
 export default withStyles(style)(Expected);

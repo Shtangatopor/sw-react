@@ -6,7 +6,7 @@ import Header from "./Header";
 
 
 
-function Home() {
+const Home = () => {
     return(
         <div className="App-Home" >
             <Header/>
