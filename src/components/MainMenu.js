@@ -12,6 +12,7 @@ const MainMenu = () => {
                         <IconButton onClick={() => {toggleDrawer(true)}}><MenuIcon/></IconButton>
                         <Drawer anchor='top' open={open} onClose={() => {toggleDrawer(false)}}>
                             <div>
+                                <Link to={'/'}><h5>home</h5></Link>
                                 <Link to={'/expected'}><h5>expected</h5></Link>
                                 <Link to={'/reality'}><h5>reality</h5></Link>
                             </div>
