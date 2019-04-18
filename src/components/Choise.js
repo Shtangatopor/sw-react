@@ -7,8 +7,8 @@ import {Tooltip} from "@material-ui/core";
 const styles = theme => ({
     root:{
         backgroundColor: 'green',
-        padding: "none", position:"absolute", bottom: "105px", width: "1024px",
-        opacity: '0'
+        // padding: "none", position:"absolute", bottom: "105px", width: "1024px",
+        // opacity: '0'
     },
     expected: {
         backgroundColor: 'blue',

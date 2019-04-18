@@ -1,14 +1,14 @@
 .App {
   text-align: center;
   /*background-color: #010101;*/
-  height: -webkit-fill-available;
+  /*height: -webkit-fill-available;*/
 
 }
 
 .App-header {
-  height: 90px;
-  color: white;
-  background-color: #010101;
+  /*height: 90px;*/
+  /*color: white;*/
+  /*background-color: #010101;*/
 
 }
 
@@ -16,8 +16,8 @@
 
 
 .App-Home {
-  background-color: #010101;
-  min-width: 1024px;
+  /*background-color: #010101;*/
+  /*min-width: 1024px;*/
 
 }
 

@@ -6,7 +6,6 @@ import MainMenu from "./components/MainMenu";
 const App = () => (
     <div className="App">
         <MainMenu/>
-
         <MainLayout/>
     </div>
 );

@@ -3,7 +3,7 @@ import '../App.css';
 
 const Header = () => (
 <div className='App-header'>
-    <h4>Голубую или красную ?</h4>
+    <h6>Голубую или красную ?</h6>
 </div>
 
 
