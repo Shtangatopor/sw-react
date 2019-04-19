@@ -18,15 +18,15 @@ const Preloader = () => {
 
 const Reality = () => {
     const [season, setSeason] = useState('winter');
-
+    const set = (e) => setSeason(e.currentTarget.value);
     return (
         <div>
             <h4>Добро пожаловать в реальность </h4>
             <div className='button'>
-                <Button value={'winter'} onClick={(e) => setSeason(e.currentTarget.value)}>Зима</Button>
-                <Button value={'spring'} onClick={(e) => setSeason(e.currentTarget.value)}>Весна</Button>
-                <Button value={'summer'} onClick={(e) => setSeason(e.currentTarget.value)}>Лето</Button>
-                <Button value={'autumn'} onClick={(e) => setSeason(e.currentTarget.value)}>Осень</Button>
+                <Button value={'winter'} onClick={set}>Зима</Button>
+                <Button value={'spring'} onClick={set}>Весна</Button>
+                <Button value={'summer'} onClick={set}>Лето</Button>
+                <Button value={'autumn'} onClick={set}>Осень</Button>
             </div>
             <div>
                 <ImageLoader src={__weatherData[season]}>
