@@ -26,11 +26,9 @@ const styles = theme => ({
     }
 });
 
- const Choice = (props) => {
-    const { classes } = props;
+const Choice = ({classes}) => {
     return(
         <div className={classes.root}>
-
             <Tooltip title='blue?'>
                 <Link to='/expected' className={classes.expected} >expected</Link>
             </Tooltip>
