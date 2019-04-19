@@ -1,26 +1,41 @@
 import React, {useState} from "react";
-import {AppBar, Drawer, IconButton, Toolbar, Typography} from "@material-ui/core";
+import {AppBar, Drawer, IconButton, ListItem, Toolbar, Typography} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import {Link} from "react-router-dom";
+import List from "@material-ui/core/List";
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 
 const MainMenu = () => {
     const [open, toggleDrawer] = useState(false);
-        return(
-            <div>
-                <AppBar position='static'>
-                    <Toolbar>
-                        <IconButton onClick={() => {toggleDrawer(true)}}><MenuIcon/></IconButton>
-                        <Drawer anchor='top' open={open} onClose={() => {toggleDrawer(false)}}>
-                            <div>
-                                <Link to={'/expected'}><h5>expected</h5></Link>
-                                <Link to={'/reality'}><h5>reality</h5></Link>
-                            </div>
-                        </Drawer>
-                        <Typography variant='h5' color='inherit'>App bar</Typography>
-                    </Toolbar>
-                </AppBar>
-            </div>
-        );
+    const close = () => {toggleDrawer(false)};
+    return(
+        <div>
+            <AppBar position='static'>
+                <Toolbar>
+                    <IconButton onClick={() => {toggleDrawer(true)}}><MenuIcon/></IconButton>
+                    <Drawer anchor='left' open={open} onClose={close}>
+                        <List>
+                            <a href='/'>
+                                <ListItem button onClick={close}>Home</ListItem>
+                            </a>
+                            <ListItem button >
+                                <ListItemIcon>
+                                    <Link to={'/expected'} onClick={close}>Expected</Link>
+                                </ListItemIcon>
+                            </ListItem>
+
+                            <ListItem button  onClick={close}>
+                                <ListItemIcon>
+                                    <Link to={'/reality'} >Reality</Link>
+                                </ListItemIcon>
+                            </ListItem>
+                        </List>
+                    </Drawer>
+                    <Typography variant='h5' color='inherit'>App bar</Typography>
+                </Toolbar>
+            </AppBar>
+        </div>
+    );
 };
 
 export default MainMenu;

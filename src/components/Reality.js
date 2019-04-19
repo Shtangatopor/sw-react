@@ -5,10 +5,10 @@ import ImageLoader from 'react-load-image';
 
 
 const __weatherData = {
-    winter : 'https://ribttes.com/wp-content/uploads/2015/01/White-Snowy-Winters-in-Russia.jpg',
-    spring : 'https://ak9.picdn.net/shutterstock/videos/31300519/thumb/1.jpg',
-    summer : 'https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2018/11/Best-Time-To-Visit8.jpg',
-    autumn : 'http://earth-chronicles.com/wp-content/uploads/2016/09/K6CeZZvXmYQ.jpg',
+    winter : 'https://www.varlamov.me/2016/snegopad/24.jpg',
+    spring : 'https://2ch.hk//b/src/188214838/15450275487203.jpg',
+    summer : 'https://varlamov.me/2018/murmansk_ploh/00s.jpg',
+    autumn : 'https://varlamov.me/2017/piter_dirt/12.jpg',
 };
 
 const Preloader = () => {
@@ -19,24 +19,24 @@ const Preloader = () => {
 const Reality = () => {
     const [season, setSeason] = useState('winter');
 
-        return (
-            <div>
-                <h4>Добро пожаловать в реальность </h4>
-                <div className='button'>
-                    <Button value={'winter'} onClick={(e) => setSeason(e.currentTarget.value)}>Зима</Button>
-                    <Button value={'spring'} onClick={(e) => setSeason(e.currentTarget.value)}>Весна</Button>
-                    <Button value={'summer'} onClick={(e) => setSeason(e.currentTarget.value)}>Лето</Button>
-                    <Button value={'autumn'} onClick={(e) => setSeason(e.currentTarget.value)}>Осень</Button>
-                </div>
-                <div>
-                    <ImageLoader src={__weatherData[season]}>
-                        <img alt={__weatherData[season]}/>
-                        <div>Error!</div>
-                        <Preloader />
-                    </ImageLoader>
-                </div>
+    return (
+        <div>
+            <h4>Добро пожаловать в реальность </h4>
+            <div className='button'>
+                <Button value={'winter'} onClick={(e) => setSeason(e.currentTarget.value)}>Зима</Button>
+                <Button value={'spring'} onClick={(e) => setSeason(e.currentTarget.value)}>Весна</Button>
+                <Button value={'summer'} onClick={(e) => setSeason(e.currentTarget.value)}>Лето</Button>
+                <Button value={'autumn'} onClick={(e) => setSeason(e.currentTarget.value)}>Осень</Button>
             </div>
-        );
+            <div>
+                <ImageLoader src={__weatherData[season]}>
+                    <img alt={__weatherData[season]}/>
+                    <div>Error!</div>
+                    <Preloader />
+                </ImageLoader>
+            </div>
+        </div>
+    );
 };
 
 export default Reality;
