@@ -6,7 +6,7 @@ import ImageLoader from 'react-load-image';
 
 const __weatherData = {
     winter : 'https://www.varlamov.me/2016/snegopad/24.jpg',
-    spring : 'https://2ch.hk//b/src/188214838/15450275487203.jpg',
+    spring : 'https://static.mk.ru/upload/entities/2021/04/29/16/articles/detailPicture/95/a4/5f/a1/852db93a876d5c2aab3fe8c1106bb65d.jpg',
     summer : 'https://varlamov.me/2018/murmansk_ploh/00s.jpg',
     autumn : 'https://varlamov.me/2017/piter_dirt/12.jpg',
 };

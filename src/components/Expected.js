@@ -4,7 +4,7 @@ import {Button} from "@material-ui/core";
 import ImageLoader from 'react-load-image';
 
 const __weatherData = {
-    winter : 'https://ribttes.com/wp-content/uploads/2015/01/White-Snowy-Winters-in-Russia.jpg',
+    winter : 'https://cdni0.trtworld.com/w960/h540/q75/26858_RUS-180131-Russia-Winter_1517643541494.jpg',//
     spring : 'https://ak9.picdn.net/shutterstock/videos/31300519/thumb/1.jpg',
     summer : 'https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2018/11/Best-Time-To-Visit8.jpg',
     autumn : 'http://earth-chronicles.com/wp-content/uploads/2016/09/K6CeZZvXmYQ.jpg',
