@@ -1,7 +1,6 @@
 ### `cd your folder`
 ### `git clone https://github.com/Shtangatopor/sw-react.git`
 ### `npm i`
-### `npm install react-scripts@latest`
 ### `npm start`
 
 Runs the app in the development mode.<br>
